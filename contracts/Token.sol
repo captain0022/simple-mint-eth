@@ -11,8 +11,9 @@ contract Token {
     string public name = "My Hardhat Token";
     string public symbol = "MHT";
 
+    uint8 public decimals = 18;
     // The fixed amount of tokens, stored in an unsigned integer type variable.
-    uint256 public totalSupply = 1000000 * 10 ** 18;
+    uint256 public totalSupply = 1000000 * 10 ** uint256(decimals);
 
     // An address type variable is used to store ethereum accounts.
     address public owner;
